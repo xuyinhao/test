@@ -1,1 +1,1 @@
-print("he")
+from smtplib import SMTP
