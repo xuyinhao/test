@@ -36,4 +36,6 @@ import math
 # print("my name is : "+name+ " !")
 
 #长字符串
-
+# 三引号
+print(r"c;\nasdas"+"\\")
+print(u"c;\\nasdas"+"\\")
