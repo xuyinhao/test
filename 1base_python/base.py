@@ -19,7 +19,7 @@
 #abs 绝对值   ；  round浮点数 四舍五入
 
 #模块
-import math
+# import math
 # print int(math.floor(32.012))
 #cmath 复数 complex math
 # import cmath
@@ -37,5 +37,5 @@ import math
 
 #长字符串
 # 三引号
-print(r"c;\nasdas"+"\\")
-print(u"c;\\nasdas"+"\\")
+# print(r"c;\nasdas"+"\\")
+# print(u"c;\\nasdas"+"\\")
