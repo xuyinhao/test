@@ -27,7 +27,7 @@ class sniffer(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
     def run(self):
-        spp=sniff(filter="udp and src port 67 and dst port 68 and src host 13.10.12.21",timeout=3) # prn=lambda x:x.show(),
+        spp=sniff(filter="udp and src port 67 and dst port 68 and src host 13.10.12.20",timeout=3) # prn=lambda x:x.show(),
        # spp.show()
        #  print('DHCP server mac: ', spp[0][Ether].src)
        #  print('DHCP server ip: ', spp[0][IP].src)
@@ -67,7 +67,7 @@ class sniffack(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
     def run(self):
-        spp=sniff(filter="udp and src port 67 and dst port 68 and src host 13.10.12.21",timeout=5) #prn=lambda x:x.show(),
+        spp=sniff(filter="udp and src port 67 and dst port 68 and src host 13.10.12.20",timeout=5) #prn=lambda x:x.show(),
         #spp.show()
         # print('DHCP server mac: ', spp[2][Ether].src)
         # print('DHCP server ip: ', spp[2][IP].src)
@@ -91,15 +91,17 @@ def main():
     conf.checkIPaddr = False
     hostname=''.join(random.choice(string.ascii_uppercase + string.digits) for x in range(8))
     myxid=random.randint(1, 900000000)
-    threadt = 60
+    threadt = 10
  #   threads = []
     lines=[]
-    f = open('macip','r')
-    for line in open('macip','r'):
+    f = open('macip20','r')
+    for line in open('macip20','r'):
         linemac=f.readline().split('|')[2]
         lines.append(linemac)
     f.close()
     print(lines[:])
+    #while [ 1 ]:
+        #time.sleep(10)
     for i in range(0,threadt):
         macaddr = lines[i]
         t1=sniffer()    ##开启监控offer
