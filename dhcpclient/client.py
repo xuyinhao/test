@@ -91,7 +91,7 @@ def main():
     conf.checkIPaddr = False
     hostname=''.join(random.choice(string.ascii_uppercase + string.digits) for x in range(8))
     myxid=random.randint(1, 900000000)
-    threadt = 10
+    threadt = 1
  #   threads = []
     lines=[]
     f = open('macip20','r')
@@ -100,17 +100,17 @@ def main():
         lines.append(linemac)
     f.close()
     print(lines[:])
-    #while [ 1 ]:
-        #time.sleep(10)
-    for i in range(0,threadt):
-        macaddr = lines[i]
-        t1=sniffer()    ##开启监控offer
-        t1.start()
-        t2=myThread(macaddr)        ##discover
-        t2.start()
-        # t3=sniffack()               ##ack 接受
-        # t3.start()
-        time.sleep(0.1)             ##两个等待
+    while [ 1 ]:
+        time.sleep(10)
+        for i in range(0,threadt):
+            macaddr = lines[i]
+            t1=sniffer()    ##开启监控offer
+            t1.start()
+            t2=myThread(macaddr)        ##discover
+            t2.start()
+            # t3=sniffack()               ##ack 接受
+            # t3.start()
+            time.sleep(0.1)             ##两个等待
     # for t in threads:
     #     t.start()
     # for t in threads:
