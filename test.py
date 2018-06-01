@@ -1,2 +1,2 @@
-input("aasasas1:")
+input("aasasas2:")
 
