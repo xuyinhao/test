@@ -1,7 +1,7 @@
 ##直接对一个函数进行 多线程
 import time,threading
-def TestPrint(name):
-    print(name)
+def TestPrint(value,thname):
+    print(value,thname)
     time.sleep(2)
 
 if __name__ == '__main__':
