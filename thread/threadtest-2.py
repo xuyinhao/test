@@ -1,6 +1,7 @@
 ##新建一个线程类
 import time
 import threading
+from concurrent.futures._base import Executor
 class NewThread(threading.Thread):
     '''
     Test
@@ -26,12 +27,12 @@ def ThreadStart1():
     for i in range(4):
         t=NewThread(i)
         t.start()
+        
 def ThreadStart2():
     ##添加join 等待线程结束才执行下面的语句
     threads=[]
     for i in range(4):
-        th=NewThread(i)
-        
+        th=NewThread(i) 
         threads.append(th)
     for t in threads:
         t.start()
@@ -40,6 +41,7 @@ def ThreadStart2():
         print(t.getResult())
     print("End")
 
+    
 if __name__ == '__main__':
-    ThreadStart2()
+    ThreadStart3()
     pass
