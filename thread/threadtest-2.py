@@ -31,7 +31,6 @@ def ThreadStart2():
     threads=[]
     for i in range(4):
         th=NewThread(i)
-        
         threads.append(th)
     for t in threads:
         t.start()

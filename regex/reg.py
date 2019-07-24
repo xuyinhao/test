@@ -53,3 +53,11 @@ it=re.finditer(r"(ch\w)", str, re.I)
 
 Test1="Ab, Bc, Cd"
 print(re.split(", ", Test1))
+
+telnum='176061196115645222'
+print(re.fullmatch("[1]{1}[0-9]{10}",telnum))
+print(re.match("[1]{1}[0-9]{10}",telnum))
+m=re.search("[1]{1}[0-9]{3}",telnum)
+print(m)
+m=re.findall("[1]{1}[0-9]{3}",telnum)
+print(m)
