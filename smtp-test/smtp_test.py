@@ -1,17 +1,21 @@
 import smtplib
+from smtplib  import  SMTP_SSL
 from email.mime.text import MIMEText
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
 
-data=open('../../user_passwd','r')
-data_line=data.readline()
-data.close()
+# data=open('../../user_passwd','r')
+# data_line=data.readline()
+# data.close()
 
-smtpserver=data_line.split(',')[0]
-user=data_line.split(',')[1]
-password=data_line.split(',')[2]
-recer=data_line.split(',')[3]
-
+# smtpserver=data_line.split(',')[0]
+# user=data_line.split(',')[1]
+smtpserver="smtp.leofs.com.cn"
+user="xuyh@leofs.com.cn"
+# password=data_line.split(',')[2]
+password="yinhao.0128"
+# recer=data_line.split(',')[3]
+recer="yinhaoxu@hotmail.com"
 
 #html 邮件的正文
 mail_msg="""
@@ -34,8 +38,7 @@ att1['Content-Type']='application/octest-stream'
 att1['Content-Disposition']='attachment;filename="jiuyou1.1.zip"'
 msg.attach(att1)
 #连接发送邮件
-smtp=smtplib.SMTP()
-smtp.connect(smtpserver,25)
+smtp=smtplib.SMTP(smtpserver,25)
 smtp.login(user,password)
 smtp.sendmail(user,recer,msg.as_string())
 smtp.quit()

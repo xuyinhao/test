@@ -1,0 +1,13 @@
+2019-11-16 21:06:05,136 - ERROR - loger2.py[:21] - error msg
+2019-11-16 21:06:05,137 - CRITICAL - loger2.py[:22] - critical msg
+2019-11-16 21:10:21,160 - ERROR - loger2.py[:25] - error msg
+2019-11-16 21:10:21,161 - CRITICAL - loger2.py[:26] - critical msg
+2019-11-16 21:35:57,001 - ERROR - loger2.py[:27] - error msg
+2019-11-16 21:35:57,251 - CRITICAL - loger2.py[:28] - critical msg
+2019-11-16 21:37:06,829 - ERROR - loger2.py[:27] - error msg
+2019-11-16 21:37:07,106 - CRITICAL - loger2.py[:28] - critical msg
+2019-11-16 21:37:47,921 - ERROR - loger2.py[:27] - error msg
+2019-11-16 21:37:47,922 - CRITICAL - loger2.py[:28] - critical msg
+2019-11-16 21:38:45,368 - ERROR - loger2.py[:27] - error msg
+2019-11-16 21:38:45,368 - CRITICAL - loger2.py[:28] - critical msg
+2019-11-16 21:39:18,246 - CRITICAL - loger2.py[:28] - critical msg
