@@ -7,13 +7,12 @@ from email.mime.multipart import MIMEMultipart
 # data=open('../../user_passwd','r')
 # data_line=data.readline()
 # data.close()
-
 # smtpserver=data_line.split(',')[0]
 # user=data_line.split(',')[1]
 smtpserver="smtp.leofs.com.cn"
 user="xuyh@leofs.com.cn"
 # password=data_line.split(',')[2]
-password="yinhao.0128"
+password="passwd************"
 # recer=data_line.split(',')[3]
 recer="yinhaoxu@hotmail.com"
 
