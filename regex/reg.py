@@ -61,3 +61,12 @@ m=re.search("[1]{1}[0-9]{3}",telnum)
 print(m)
 m=re.findall("[1]{1}[0-9]{3}",telnum)
 print(m)
+
+m="<Value>leofs://localhost/</value>"
+rem=re.compile(r'(?<=<value>).+(?=</value>)',re.I)
+ret_m=re.findall(rem,m)
+print(''.join(ret_m))
+
+reb=re.compile('value',re.I)
+print(re.findall(reb,m))
+print(re.sub(reb,'MMMMM',m))

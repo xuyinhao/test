@@ -5,6 +5,7 @@ class NewThread(threading.Thread):
     '''
     Test
     '''
+
     def __init__(self,name):
         ##显式的调用父类的 初始化
         super(NewThread,self).__init__()
@@ -14,11 +15,12 @@ class NewThread(threading.Thread):
         return self.res
         
     def run(self):
-        print(self.name)
-        threading.Thread.setName(self,"thread"+self.name)
-        print("name:",threading.Thread.getName(self))
+        self.res = "False"
+        print("线程名："+self.name)
+        threading.Thread.setName(self,"set_thread_name"+self.name)
+        print("线程名name:",threading.Thread.getName(self))
         time.sleep(2)
-        print(self.name,"e")
+        print("线程名："+self.name,"e")
         self.res="OK"
         
 def ThreadStart1():
@@ -26,6 +28,7 @@ def ThreadStart1():
     for i in range(4):
         t=NewThread(i)
         t.start()
+    print("No join ,end.")
 def ThreadStart2():
     ##添加join 等待线程结束才执行下面的语句
     threads=[]
@@ -34,10 +37,14 @@ def ThreadStart2():
         threads.append(th)
     for t in threads:
         t.start()
-    for t in threads:
-        t.join()
-        print(t.getResult())
+    # for t in threads:
+    #     t.join()
+    print("get Result:"+t.getResult())
+
     print("End")
+    time.sleep(5)
+    print("get Result:"+t.getResult())
+
 
 if __name__ == '__main__':
     ThreadStart2()

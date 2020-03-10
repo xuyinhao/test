@@ -8,7 +8,7 @@ import  pymysql
 # 持久性（durability）。持续性也称永久性（permanence），指一个事务一旦提交，它对数据库中数据的改变就应该是永久性的。接下来的其他操作或故障不应该对其有任何影响。
 global  cursor
 global db
-db = pymysql.connect("122.112.220.238",'root','mysql.yinhao','wordpress')
+db = pymysql.connect("122.112.220.238",'root','passwd','wordpress')
 cursor = db.cursor()
 def select():
     sql="SELECT * FROM wp_users;"
