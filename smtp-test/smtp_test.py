@@ -18,7 +18,7 @@ recer="yinhaoxu@hotmail.com"
 
 #html 邮件的正文
 mail_msg="""
-<h1>傻孩子 你好</h1>
+<h1>求学Boy 你好</h1>
 <p>Python 邮件发送测试...</p>
 <p><a href="http://www.baidu.com">这是一个baidu链接</a></p>
 """
